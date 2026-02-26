@@ -1,38 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FaPhp, FaJs, FaLaravel, FaVuejs, FaJava, FaGitAlt, FaHtml5, FaCss3Alt, 
-  FaSass, FaBootstrap, FaGithub, FaFigma, FaDatabase 
-} from 'react-icons/fa';
-import { 
-  SiSpringboot, SiJquery, SiGulp, SiRollupdotjs, 
-  SiAdobephotoshop, SiAdobeillustrator, SiAdobexd 
-} from 'react-icons/si';
+import { FaJs, FaGitAlt, FaHtml5, FaCss3Alt, FaBootstrap, FaGithub, FaFigma,} from 'react-icons/fa';
+import { SiTailwindcss,  SiReact,SiAdobephotoshop, } from "react-icons/si";
 
 const skillData = [
   {
     category: "Focus In",
     skills: [
-      { name: "PHP", icon: <FaPhp size={22} color="#777BB4" /> },
       { name: "JavaScript", icon: <FaJs size={22} color="#F7DF1E" /> },
-      { name: "Laravel", icon: <FaLaravel size={22} color="#FF2D20" /> },
-      { name: "Vue JS", icon: <FaVuejs size={22} color="#4FC08D" /> },
-      { name: "Java", icon: <FaJava size={22} color="#007396" /> },
-      { name: "Spring Boot", icon: <SiSpringboot size={22} color="#6DB33F" /> }
+      { name: "React", icon: <SiReact size={22} color="#61DAFB" /> },
     ]
   },
   {
     category: "Good Knowledge",
     skills: [
-      { name: "Git", icon: <FaGitAlt size={22} color="#F05032" /> },
-      { name: "jQuery", icon: <SiJquery size={22} color="#0769AD" /> },
-      { name: "Gulp", icon: <SiGulp size={22} color="#CF4647" /> },
-      { name: "Rollup", icon: <SiRollupdotjs size={22} color="#FF3333" /> },
+
       { name: "HTML5", icon: <FaHtml5 size={22} color="#E34F26" /> },
-      { name: "CSS3", icon: <FaCss3Alt size={22} color="#1572B6" /> },
-      { name: "SASS", icon: <FaSass size={22} color="#CC6699" /> },
+      { name: "CSS", icon: <FaCss3Alt size={22} color="#1572B6" /> },
       { name: "Bootstrap", icon: <FaBootstrap size={22} color="#7952B3" /> },
-      { name: "MySQL", icon: <FaDatabase size={22} color="#4479A1" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss size={22} color="#38BDF8" /> },
+      { name: "Git", icon: <FaGitAlt size={22} color="#F05032" /> },
       { name: "GitHub", icon: <FaGithub size={22} color="#181717" /> }
     ]
   },
@@ -40,8 +27,6 @@ const skillData = [
     category: "Design Tools",
     skills: [
       { name: "Photoshop", icon: <SiAdobephotoshop size={22} color="#31A8FF" /> },
-      { name: "Illustrator", icon: <SiAdobeillustrator size={22} color="#FF9A00" /> },
-      { name: "Adobe XD", icon: <SiAdobexd size={22} color="#FF61F6" /> },
       { name: "Figma", icon: <FaFigma size={22} color="#F24E1E" /> }
     ]
   }
@@ -57,16 +42,16 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, scale: 0.8, y: 10 },
-  visible: { 
-    opacity: 1, 
-    scale: 1, 
+  visible: {
+    opacity: 1,
+    scale: 1,
     y: 0,
     transition: { type: "spring", stiffness: 200, damping: 15 }
   }
 };
 
 const SkillItem = ({ name, icon }) => (
-  <motion.div 
+  <motion.div
     variants={itemVariants}
     whileHover={{ y: -8 }}
     className="flex items-center gap-4 cursor-default group"
@@ -96,10 +81,10 @@ const SkillItem = ({ name, icon }) => (
 
 const SkillsSection = () => {
   return (
-    <section className="py-24 px-8 bg-[#FCF9F2]">
+    <section id="Skills" className="py-24 px-8 bg-[#FCF9F2]">
       <div className="max-w-6xl mx-auto">
-        
-        <motion.header 
+
+        <motion.header
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -121,7 +106,7 @@ const SkillsSection = () => {
                 <div className="w-full h-[1px] bg-[#8B7355]/10" />
               </div>
 
-              <motion.div 
+              <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"

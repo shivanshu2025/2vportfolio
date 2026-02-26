@@ -7,7 +7,7 @@ const AboutSection = () => {
   const yParallax = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <section className="min-h-screen bg-[#FFFBF2] py-20 px-8 md:px-24 flex flex-col justify-center font-sans text-[#5D4E2C]">
+    <section id="About" className="min-h-screen bg-[#FFFBF2] py-20 px-8 md:px-24 flex flex-col justify-center font-sans text-[#5D4E2C]">
       
       {/* Section Header */}
       <motion.div 
@@ -32,15 +32,18 @@ const AboutSection = () => {
           className="lg:col-span-2 space-y-8 text-lg leading-relaxed max-w-2xl"
         >
           <p>
-            <span className="text-4xl font-serif font-bold">W</span>e are a modern real estate brand dedicated to redefining the way people discover and experience properties. With years of industry insight, we combine design, technology, and trust to deliver exceptional living spaces.
+            <span className="text-4xl font-serif font-bold">W</span>e are a modern real estate brand committed to redefining how people discover and experience
+            exceptional properties. Backed by years of industry expertise, we seamlessly blend design, technology, 
+            and trust to deliver distinctive living spaces that inspire.
           </p>
 
           <p className="hover:text-[#C5A059] transition-colors duration-300 cursor-default">
-            Every project we present is carefully selected for quality, location, and long-term value. We believe a home is more than just a place — it's a lifestyle, an investment, and a future.
+            Each project we showcase is carefully curated for its quality, prime location, and long-term value. We believe
+            a home is more than just a space — it’s a lifestyle, a smart investment, and the foundation for your future.
           </p>
 
           <p>
-            Our mission is simple: provide transparency, elegance, and innovation in every interaction. <span className="underline decoration-[#C5A059] underline-offset-4">Building lasting relationships with our clients</span> is at the heart of everything we do.
+            a home is more than just a space — it’s a lifestyle, a smart investment, and the foundation for your future. <span className="underline decoration-[#C5A059] underline-offset-4">By building meaningful and lasting relationships, we ensure that every client’s journey is as remarkable as the property they choose.</span> is at the heart of everything we do.
           </p>
         </motion.div>
 

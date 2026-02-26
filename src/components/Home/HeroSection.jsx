@@ -13,7 +13,7 @@ const HeroSection = () => {
     ];
 
     return (
-        <div className="relative min-h-screen w-full bg-[#FDFBF3] flex items-center justify-center p-6 md:p-12 overflow-hidden selection:bg-[#8D7B5F] selection:text-white">
+        <div id="intro" className="relative min-h-screen w-full bg-[#FDFBF3] flex items-center justify-center p-6 md:p-12 overflow-hidden selection:bg-[#8D7B5F] selection:text-white">
 
             {/* Decorative Background Stars */}
             {stars.map((pos, i) => (
@@ -22,7 +22,7 @@ const HeroSection = () => {
 
 <div className="absolute left-6 md:left-12 bottom-12 flex flex-col gap-6 text-[#B5A48B]">
     <motion.a 
-        href="https://github.com" 
+        href="https://github.com/shivanshu2025" 
         target="_blank" 
         rel="noopener noreferrer"
         whileHover={{ y: -5, color: '#8D7B5F' }}
@@ -75,7 +75,7 @@ const HeroSection = () => {
                         <div className="flex items-center gap-3 text-[#8D7B5F] text-xl font-medium mb-4">
                             <span className="w-10 h-[1px] bg-[#8D7B5F]/50" />
                             <p className="flex items-center gap-2">
-                                Hi there <Hand size={20} className="text-[#B5A48B] animate-pulse" /> I am
+                                Hi, I’m  <Hand size={20} className="text-[#B5A48B] animate-pulse" />  Jatin Singh,
                             </p>
                         </div>
 
@@ -84,13 +84,16 @@ const HeroSection = () => {
                         </h1>
 
                         <h2 className="text-2xl md:text-3xl font-bold text-[#8D7B5F] mb-6">
-                            A web Developer.
+                            a passionate Web Developer.
                         </h2>
 
                         <p className="text-[#7A6B54] text-lg leading-relaxed max-w-lg mb-10 font-light">
-                            Passionate and innovative developer with a flair for UI/UX design. I enjoy
-                            understanding how things work behind the scenes and using that knowledge to
-                            efficiently solve problems and build better software.
+                          I specialize in building modern, responsive, and user-friendly web applications. 
+                          With a strong interest in UI/UX design, I focus on creating seamless digital 
+                          experiences that are both visually appealing and highly functional
+
+                          I enjoy understanding how things work behind the scenes — from frontend interactions to backend logic — and use that knowledge 
+                          to solve problems efficiently and build scalable, high-quality software.
                         </p>
 
                         {/* Buttons with Icons */}
