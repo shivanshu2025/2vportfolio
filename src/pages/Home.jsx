@@ -7,7 +7,6 @@ import { OpenSourceSection } from '../components/Home/OpenSourceSection';
 import TestimonialSection from '../components/Home/TestimonialCard';
 import ContactSection from '../components/Home/ContactSection';
 
-
 const Home = () => {
   return (
     <>
@@ -18,6 +17,7 @@ const Home = () => {
       <OpenSourceSection/>
       <TestimonialSection/>
       <ContactSection/>
+     
     </>
   );
 };
