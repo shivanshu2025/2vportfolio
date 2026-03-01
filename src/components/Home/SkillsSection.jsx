@@ -15,7 +15,7 @@ const skillData = [
     category: "Good Knowledge",
     skills: [
 
-      { name: "HTML5", icon: <FaHtml5 size={22} color="#E34F26" /> },
+      { name: "HTML", icon: <FaHtml5 size={22} color="#E34F26" /> },
       { name: "CSS", icon: <FaCss3Alt size={22} color="#1572B6" /> },
       { name: "Bootstrap", icon: <FaBootstrap size={22} color="#7952B3" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss size={22} color="#38BDF8" /> },

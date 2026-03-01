@@ -13,36 +13,36 @@ const HeroSection = () => {
     ];
 
     return (
-        <div id="intro" className="relative min-h-screen w-full bg-[#FDFBF3] flex items-center justify-center p-6 md:p-12 overflow-hidden selection:bg-[#8D7B5F] selection:text-white">
+        <div id="intro" className="relative min-h-screen w-full bg-[#FDFBF3] flex items-center justify-center p-6 overflow-hidden selection:bg-[#8D7B5F] selection:text-white">
 
             {/* Decorative Background Stars */}
             {stars.map((pos, i) => (
                 <span key={i} className="absolute text-[#B5A48B] text-[10px] opacity-40" style={pos}>✧</span>
             ))}
 
-<div className="absolute left-6 md:left-12 bottom-12 flex flex-col gap-6 text-[#B5A48B]">
-    <motion.a 
-        href="https://github.com/shivanshu2025" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        whileHover={{ y: -5, color: '#8D7B5F' }}
-        className="transition-colors p-2 bg-white/20 rounded-full backdrop-blur-sm border border-[#B5A48B]/10 shadow-sm"
-        title="Github"
-    >
-        <FaGithub size={20} />
-    </motion.a>
-    
-    <motion.a 
-        href="https://linkedin.com" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        whileHover={{ y: -5, color: '#8D7B5F' }}
-        className="transition-colors p-2 bg-white/20 rounded-full backdrop-blur-sm border border-[#B5A48B]/10 shadow-sm"
-        title="Linkedin"
-    >
-        <FaLinkedin size={20} />
-    </motion.a>
-</div>
+            <div className="absolute left-6 md:left-12 bottom-12 flex flex-col gap-6 text-[#B5A48B]">
+                <motion.a
+                    href="https://github.com/shivanshu2025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -5, color: '#8D7B5F' }}
+                    className="transition-colors p-2 bg-white/20 rounded-full backdrop-blur-sm border border-[#B5A48B]/10 shadow-sm"
+                    title="Github"
+                >
+                    <FaGithub size={20} />
+                </motion.a>
+
+                <motion.a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -5, color: '#8D7B5F' }}
+                    className="transition-colors p-2 bg-white/20 rounded-full backdrop-blur-sm border border-[#B5A48B]/10 shadow-sm"
+                    title="Linkedin"
+                >
+                    <FaLinkedin size={20} />
+                </motion.a>
+            </div>
 
             {/* Main Content */}
             <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
@@ -58,7 +58,7 @@ const HeroSection = () => {
 
                     <motion.img
                         src="./public/img/pic-removebg-preview.png"
-                        alt="Shakir El Amrani"
+                        alt="jatin singh"
                         className="relative z-10 w-64 md:w-[450px] drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
                         whileHover={{ y: -10, rotate: -1 }}
                         transition={{ type: "spring", stiffness: 100 }}
@@ -88,23 +88,25 @@ const HeroSection = () => {
                         </h2>
 
                         <p className="text-[#7A6B54] text-lg leading-relaxed max-w-lg mb-10 font-light">
-                          I specialize in building modern, responsive, and user-friendly web applications. 
-                          With a strong interest in UI/UX design, I focus on creating seamless digital 
-                          experiences that are both visually appealing and highly functional
+                            I specialize in building modern, responsive, and user-friendly web applications.
+                            With a strong interest in UI/UX design, I focus on creating seamless digital
+                            experiences that are both visually appealing and highly functional
 
-                          I enjoy understanding how things work behind the scenes — from frontend interactions to backend logic — and use that knowledge 
-                          to solve problems efficiently and build scalable, high-quality software.
+                            I enjoy understanding how things work behind the scenes — from frontend interactions to backend logic — and use that knowledge
+                            to solve problems efficiently and build scalable, high-quality software.
                         </p>
 
                         {/* Buttons with Icons */}
                         <div className="flex flex-wrap gap-5">
-                            <motion.button
+                            <motion.a
+                                href="./public/resume.pdf.pdf"      // public folder me resume.pdf rakho
+                                download
                                 whileHover={{ scale: 1.02, backgroundColor: '#7A6B54' }}
                                 whileTap={{ scale: 0.98 }}
                                 className="flex items-center gap-3 bg-[#8D7B5F] text-white px-8 py-4 rounded-sm shadow-xl font-bold tracking-widest text-xs"
                             >
                                 <FaFilePdf className="text-base" /> RESUME
-                            </motion.button>
+                            </motion.a>
 
                             <motion.button
                                 whileHover={{ scale: 1.02, borderColor: '#8D7B5F', color: '#8D7B5F' }}
