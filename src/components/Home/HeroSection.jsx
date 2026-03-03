@@ -108,6 +108,9 @@ const HeroSection = () => {
                             <motion.button
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.97 }}
+                                onClick={() => {
+                                    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+                                }}
                                 className="w-full sm:w-auto flex items-center justify-center gap-3 border border-[#B5A48B]/40 bg-white/40 px-8 py-4 rounded-sm text-[#8D7B5F] font-bold tracking-widest text-xs"
                             >
                                 <Mail size={16} /> CONTACT

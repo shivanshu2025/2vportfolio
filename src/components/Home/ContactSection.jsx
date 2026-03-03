@@ -1,29 +1,36 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaBehance, FaGithub, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
-
   const formRef = useRef();
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
+    // ✅ Replace the below IDs with your actual EmailJS credentials
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",     // 👈 EmailJS service id
-        "YOUR_TEMPLATE_ID",    // 👈 EmailJS template id
+        "service_0ytm8o2", // Your EmailJS Service ID
+        "template_kta4cf2", // Your EmailJS Template ID
         formRef.current,
-        "YOUR_PUBLIC_KEY"      // 👈 EmailJS public key
+        "CZdrD-F2kzHCuIISN" // Your EmailJS Public Key
       )
-      .then(() => {
+      .then((result) => {
+        console.log("SUCCESS ✅", result);
         alert("Message sent successfully ✅");
         formRef.current.reset();
       })
-      .catch(() => {
-        alert("Failed to send message ❌");
+      .catch((error) => {
+        console.log("ERROR ❌", error);
+        alert("Failed to send message ❌ Check console for details");
+      })
+      .finally(() => {
+        setIsSending(false);
       });
   };
 
@@ -35,14 +42,7 @@ const ContactSection = () => {
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.1,
-      },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.1 } },
   };
 
   const itemVariants = {
@@ -73,10 +73,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
           {/* LEFT SIDE */}
           <div className="space-y-8">
-            <motion.p
-              variants={itemVariants}
-              className="text-[#8B7355] text-lg leading-relaxed max-w-md"
-            >
+            <motion.p variants={itemVariants} className="text-[#8B7355] text-lg leading-relaxed max-w-md">
               I am always open to discussing your project or sharing knowledge.
               Feel free to contact me with any questions or if you have a project
               we can work on together.
@@ -87,12 +84,10 @@ const ContactSection = () => {
                 <Mail size={18} />
                 <span>2vshivansu@gmail.com</span>
               </div>
-
               <div className="flex items-center gap-3 text-[#6D5D44]">
                 <Phone size={18} />
                 <span>+91 9760926681</span>
               </div>
-
               <div className="flex items-center gap-3 text-[#6D5D44]">
                 <MapPin size={18} />
                 <span>India</span>
@@ -103,7 +98,6 @@ const ContactSection = () => {
               <p className="text-[#8B7355] font-semibold uppercase tracking-widest text-sm mb-4">
                 Follow me on
               </p>
-
               <div className="flex gap-4">
                 {socialLinks.map((social, i) => (
                   <motion.a
@@ -111,11 +105,7 @@ const ContactSection = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{
-                      scale: 1.1,
-                      backgroundColor: "#8B7355",
-                      color: "#FCF9F2",
-                    }}
+                    whileHover={{ scale: 1.1, backgroundColor: "#8B7355", color: "#FCF9F2" }}
                     whileTap={{ scale: 0.95 }}
                     className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#8B7355] text-[#FCF9F2] transition-colors"
                   >
@@ -127,12 +117,7 @@ const ContactSection = () => {
           </div>
 
           {/* RIGHT SIDE FORM */}
-          <motion.form
-            ref={formRef}
-            variants={itemVariants}
-            className="flex flex-col gap-6"
-            onSubmit={sendEmail}
-          >
+          <motion.form ref={formRef} variants={itemVariants} className="flex flex-col gap-6" onSubmit={sendEmail}>
             <input
               type="text"
               name="user_name"
@@ -140,7 +125,6 @@ const ContactSection = () => {
               required
               className="w-full bg-transparent border-2 border-[#8B7355]/30 rounded-lg p-4 outline-none focus:border-[#8B7355] transition-all placeholder:text-[#BDB19B]"
             />
-
             <input
               type="email"
               name="user_email"
@@ -148,7 +132,6 @@ const ContactSection = () => {
               required
               className="w-full bg-transparent border-2 border-[#8B7355]/30 rounded-lg p-4 outline-none focus:border-[#8B7355] transition-all placeholder:text-[#BDB19B]"
             />
-
             <textarea
               rows="6"
               name="message"
@@ -156,16 +139,16 @@ const ContactSection = () => {
               required
               className="w-full bg-transparent border-2 border-[#8B7355]/30 rounded-lg p-4 outline-none focus:border-[#8B7355] transition-all placeholder:text-[#BDB19B] resize-none"
             />
-
             <motion.button
               type="submit"
-              whileHover={{ y: -4 }}
-              whileTap={{ y: 0 }}
-              className="relative group mt-2"
+              disabled={isSending}
+              whileHover={!isSending ? { y: -4 } : {}}
+              whileTap={!isSending ? { y: 0 } : {}}
+              className={`relative group mt-2 ${isSending ? "opacity-70 cursor-not-allowed" : ""}`}
             >
               <div className="absolute inset-0 bg-[#5A4B37] rounded-lg translate-y-2" />
               <div className="relative bg-[#8B7355] text-[#FCF9F2] font-bold py-4 rounded-lg uppercase tracking-[0.2em] transition-transform group-hover:-translate-y-1">
-                Send
+                {isSending ? "Sending..." : "Send"}
               </div>
             </motion.button>
           </motion.form>
