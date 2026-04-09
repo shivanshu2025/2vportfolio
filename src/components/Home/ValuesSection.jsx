@@ -46,7 +46,7 @@ const ValuesSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto bg-[#fdfbf7]">
+    <section className="py-10 px-6 max-w-7xl mx-auto bg-[#fdfbf7]">
       {/* Header */}
       <div className="mb-16">
         <div className="w-12 h-1 bg-amber-600 mb-4"></div>

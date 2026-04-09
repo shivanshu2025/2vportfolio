@@ -72,7 +72,7 @@ const TestimonialSection = () => {
   // For a real slider with many items, you'd calculate offset. 
   // Here we'll treat the 3 cards as one "page" or slide between them on mobile.
   return (
-    <section className="bg-[#FCF9F2] py-16 px-6 overflow-hidden">
+    <section className="bg-[#FCF9F2] px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-[#6D5D44] mb-12">
           They Say About Me.

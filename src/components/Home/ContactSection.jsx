@@ -53,7 +53,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="bg-[#FCF9F2] py-24 px-6 md:px-12 font-sans overflow-hidden"
+      className="bg-[#FCF9F2] py-5 px-6 md:px-12 font-sans overflow-hidden"
     >
       <motion.div
         className="max-w-6xl mx-auto"
@@ -155,9 +155,9 @@ const ContactSection = () => {
         </div>
 
         {/* FOOTER */}
-        <div className="mt-32 pt-12 border-t border-[#8B7355]/20 text-center">
+        <div className="mt-17 pt-10 border-t border-[#8B7355]/20 text-center">
           <p className="text-[#BDB19B] text-sm">
-            Crafted with 💛 By AmraniCh | Hosted on AWS | Deployed via Github Actions
+            © 2026 Designed & Developed by Jatin Singh
             <span className="ml-2 bg-[#6D5D44] text-white px-2 py-0.5 rounded text-[10px]">
               v1.0.0
             </span>

@@ -81,7 +81,7 @@ const SkillItem = ({ name, icon }) => (
 
 const SkillsSection = () => {
   return (
-    <section id="Skills" className="py-24 px-8 bg-[#FCF9F2]">
+    <section id="Skills" className="py-5 px-8 bg-[#FCF9F2]">
       <div className="max-w-6xl mx-auto">
 
         <motion.header

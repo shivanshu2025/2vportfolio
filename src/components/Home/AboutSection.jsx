@@ -7,7 +7,7 @@ const AboutSection = () => {
   const yParallax = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <section id="About" className="min-h-screen bg-[#FFFBF2] py-20 px-8 md:px-24 flex flex-col justify-center font-sans text-[#5D4E2C]">
+    <section id="About" className="min-h-screen bg-[#FFFBF2] py-5 px-8 md:px-24 flex flex-col justify-center font-sans text-[#5D4E2C]">
       
       {/* Section Header */}
       <motion.div 

@@ -2,8 +2,8 @@ import { Star, GitFork, Download } from 'lucide-react';
 
 const repos = [
   {
-    name: "lazzard/php-ftp-client",
-    url: "https://github.com/lazzard/php-ftp-client",
+    name: "https://project2-5a96.vercel.app",
+    url: "https://project2-5a96.vercel.app",
     desc: "Provides helper classes and methods to manage FTP files in an OOP way.",
     stars: 88,
     forks: 17,
@@ -40,7 +40,7 @@ const repos = [
 ];
 
 export const OpenSourceSection = () => (
-  <section id="open-source" className="bg-[#fdfbf7] py-20 px-10">
+  <section id="open-source" className="bg-[#fdfbf7] py-10 px-10">
     <div className="max-w-7xl mx-auto">
       <div className="mb-12">
         <div className="w-12 h-1 bg-[#d4af37] mb-4"></div>

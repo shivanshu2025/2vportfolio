@@ -17,7 +17,7 @@ const Home = () => {
       <OpenSourceSection/>
       <TestimonialSection/>
       <ContactSection/>
-     
+      
     </>
   );
 };
