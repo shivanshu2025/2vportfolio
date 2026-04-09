@@ -19,11 +19,6 @@ const Home = () => {
       <OpenSourceSection/>
       <TestimonialSection/>
       <ContactSection/>
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> 6b190046bdf696936846b694448d156128384c1b
     </>
   );
 };
