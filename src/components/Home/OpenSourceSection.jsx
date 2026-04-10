@@ -8,7 +8,8 @@ const repos = [
     stars: 88,
     forks: 17,
     downloads: "107K",
-    tags: ["PHP", "Shell", "Dockerfile"]
+    tags: ["Rect", "Shell", "Dockerfile"]
+
   },
   {
     name: "AmraniCh/github-code-font-changer",
