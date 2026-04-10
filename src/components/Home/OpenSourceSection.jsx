@@ -9,10 +9,9 @@ const repos = [
     forks: 17,
     downloads: "107K",
     tags: ["Rect", "Shell", "Dockerfile"]
-
   },
   {
-    name: "AmraniCh/github-code-font-changer",
+    name: "https://project2-5a96.vercel.app",
     url: "https://project2-5a96.vercel.app",
     desc: "Change and customize the boring GitHub code viewer font.",
     stars: 65,
