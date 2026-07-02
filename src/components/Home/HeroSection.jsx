@@ -96,7 +96,7 @@ const HeroSection = () => {
                         {/* Buttons */}
                         <div className="flex flex-col sm:flex-row items-center md:items-start gap-4">
                             <motion.a
-                                href="/resume.pdf"
+                                href="/resume.jpg"
                                 download
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.97 }}
