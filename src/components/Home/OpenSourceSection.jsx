@@ -11,7 +11,7 @@ const repos = [
     tags: ["Rect", "Shell", "Dockerfile"]
   },
   {
-    name: "https://project2-5a96.vercel.app",
+    name: "Login-sinup",
     url: "https://project2-5a96.vercel.app",
     desc: "Change and customize the boring GitHub code viewer font.",
     stars: 65,
