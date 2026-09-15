@@ -2,8 +2,8 @@ import { Star, GitFork, Download } from 'lucide-react';
 
 const repos = [
   {
-    name: "https://project2-5a96.vercel.app",
-    url: "https://project2-5a96.vercel.app",
+    name: "lms-webiste",
+    url: "https://lms-webiste-main-rcu6.vercel.app/",
     desc: "Provides helper classes and methods to manage FTP files in an OOP way.",
     stars: 88,
     forks: 17,
@@ -45,7 +45,7 @@ export const OpenSourceSection = () => (
       <div className="mb-12">
         <div className="w-12 h-1 bg-[#d4af37] mb-4"></div>
         <h2 className="text-2xl font-bold text-[#5c4b37]">
-          Open Source.
+          Project.
         </h2>
       </div>
 
