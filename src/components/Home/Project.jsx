@@ -39,7 +39,7 @@ const repos = [
   },
 ];
 
-export const OpenSourceSection = () => (
+export const Project = () => (
   <section id="open-source" className="bg-[#fdfbf7] py-10 px-10">
     <div className="max-w-7xl mx-auto">
       <div className="mb-12">
@@ -117,3 +117,5 @@ export const OpenSourceSection = () => (
     </div>
   </section>
 );
+
+export default Project;
