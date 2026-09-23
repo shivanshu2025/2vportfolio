@@ -20,8 +20,8 @@ const repos = [
     tags: ["JavaScript", "CSS", "HTML"]
   },
     {
-    name: "lazzard/php-ftp-client",
-    url: "https://github.com/lazzard/php-ftp-client",
+    name: "kaiyo",
+    url: "https://kaiyo-tau.vercel.app/",
     desc: "Provides helper classes and methods to manage FTP files in an OOP way.",
     stars: 88,
     forks: 17,
