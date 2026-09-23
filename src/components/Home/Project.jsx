@@ -40,7 +40,9 @@ const repos = [
 ];
 
 export const Project = () => (
-  <section id="open-source" className="bg-[#fdfbf7] py-10 px-10">
+  <section id="open-source" className="relative bg-[#fdfbf7] py-10 px-10">
+    {/* Alias for #projects hash - supports both #open-source and #projects */}
+    <span id="projects" aria-hidden="true" className="absolute top-0" />
     <div className="max-w-7xl mx-auto">
       <div className="mb-12">
         <div className="w-12 h-1 bg-[#d4af37] mb-4"></div>

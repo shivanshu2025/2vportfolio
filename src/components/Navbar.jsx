@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 export default function Navbar() {
   const [isDark, setIsDark] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("intro");
+  const [active, setActive] = useState("home");
 
   const { scrollY } = useScroll();
 
@@ -23,10 +23,10 @@ export default function Navbar() {
   );
 
   const navLinks = [
-    { name: "Intro", path: "intro" },
-    { name: "About", path: "About" },
-    { name: "Skills", path: "Skills" },
-    { name: "Project", path: "Project" },
+    { name: "Home", path: "home" },
+    { name: "About", path: "about" },
+    { name: "Skills", path: "skills" },
+    { name: "Projects", path: "open-source" },
     { name: "Contact", path: "contact" },
   ];
 
@@ -34,6 +34,31 @@ export default function Navbar() {
     if (isOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "unset";
   }, [isOpen]);
+
+  // Handle initial hash on page load / refresh - scroll to target section
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+          setActive(hash === "projects" ? "open-source" : hash);
+        }, 300);
+      }
+    }
+  }, []);
+
+  const handleLogoClick = () => {
+    const el = document.getElementById("home") || document.getElementById("intro");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", "#home");
+      setActive("home");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.nav
@@ -44,6 +69,7 @@ export default function Navbar() {
       <motion.div
         whileHover={{ scale: 1.1, rotate: -2 }}
         whileTap={{ scale: 0.95 }}
+        onClick={handleLogoClick}
         className="relative z-[110] flex items-center cursor-pointer"
       >
         <h1 className="text-3xl md:text-4xl font-bold text-[#d4b46a] tracking-tighter italic">

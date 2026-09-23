@@ -13,9 +13,11 @@ const HeroSection = () => {
 
     return (
         <div
-            id="intro"
+            id="home"
             className="relative min-h-screen w-full bg-[#FDFBF3] flex items-center justify-center px-4 md:px-6 overflow-hidden"
         >
+            {/* Alias for legacy #intro hash */}
+            <span id="intro" aria-hidden="true" className="absolute top-0" />
             {/* Stars – reduced on mobile */}
             {stars.map((pos, i) => (
                 <span
