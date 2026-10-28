@@ -29,8 +29,8 @@ const repos = [
     tags: ["PHP", "Shell", "Dockerfile"]
   },
   {
-    name: "AmraniCh/github-code-font-changer",
-    url: "https://github.com/AmraniCh/github-code-font-changer",
+    name: "Restaurant Management",
+    url: "https://restaurant-web-navy.vercel.app/",
     desc: "Change and customize the boring GitHub code viewer font.",
     stars: 65,
     forks: 10,
